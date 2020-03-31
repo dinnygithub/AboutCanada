@@ -14,6 +14,12 @@
 		31B81C292432DF51001BC39C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31B81C282432DF51001BC39C /* Assets.xcassets */; };
 		31B81C2C2432DF51001BC39C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31B81C2A2432DF51001BC39C /* LaunchScreen.storyboard */; };
 		31B81C372432DF51001BC39C /* AboutCanadaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B81C362432DF51001BC39C /* AboutCanadaTests.swift */; };
+		31B81C432432F45A001BC39C /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B81C422432F45A001BC39C /* ListVC.swift */; };
+		31B81C462432F531001BC39C /* CanadaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B81C452432F531001BC39C /* CanadaModel.swift */; };
+		31B81C4A2432F578001BC39C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B81C492432F578001BC39C /* Constants.swift */; };
+		31B81C4D2432F5AB001BC39C /* Uiview+constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B81C4C2432F5AB001BC39C /* Uiview+constraints.swift */; };
+		31B81C4F2432F5D7001BC39C /* UIimage+func.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B81C4E2432F5D7001BC39C /* UIimage+func.swift */; };
+		31B81C522432F5FE001BC39C /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B81C512432F5FE001BC39C /* Theme.swift */; };
 		B3E2EE4437B237DEDA4D3C90 /* Pods_AboutCanada.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F680F2241F1497334AA2F6 /* Pods_AboutCanada.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +47,12 @@
 		31B81C322432DF51001BC39C /* AboutCanadaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AboutCanadaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		31B81C362432DF51001BC39C /* AboutCanadaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutCanadaTests.swift; sourceTree = "<group>"; };
 		31B81C382432DF51001BC39C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31B81C422432F45A001BC39C /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
+		31B81C452432F531001BC39C /* CanadaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanadaModel.swift; sourceTree = "<group>"; };
+		31B81C492432F578001BC39C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		31B81C4C2432F5AB001BC39C /* Uiview+constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Uiview+constraints.swift"; sourceTree = "<group>"; };
+		31B81C4E2432F5D7001BC39C /* UIimage+func.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIimage+func.swift"; sourceTree = "<group>"; };
+		31B81C512432F5FE001BC39C /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		45695D40E0A400B4E9CD1238 /* Pods-AboutCanada.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanada.debug.xcconfig"; path = "Target Support Files/Pods-AboutCanada/Pods-AboutCanada.debug.xcconfig"; sourceTree = "<group>"; };
 		6586996DFEFA1EE2D7A54B4A /* Pods-AboutCanadaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanadaTests.debug.xcconfig"; path = "Target Support Files/Pods-AboutCanadaTests/Pods-AboutCanadaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A8BFEBA790FD7AD4601637E2 /* Pods-AboutCanadaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanadaTests.release.xcconfig"; path = "Target Support Files/Pods-AboutCanadaTests/Pods-AboutCanadaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +112,9 @@
 		31B81C1E2432DF4E001BC39C /* AboutCanada */ = {
 			isa = PBXGroup;
 			children = (
+				31B81C472432F562001BC39C /* Utility */,
+				31B81C442432F511001BC39C /* Model */,
+				31B81C412432F434001BC39C /* VC */,
 				31B81C1F2432DF4E001BC39C /* AppDelegate.swift */,
 				31B81C212432DF4E001BC39C /* SceneDelegate.swift */,
 				31B81C232432DF4E001BC39C /* ViewController.swift */,
@@ -117,6 +132,57 @@
 				31B81C382432DF51001BC39C /* Info.plist */,
 			);
 			path = AboutCanadaTests;
+			sourceTree = "<group>";
+		};
+		31B81C412432F434001BC39C /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				31B81C422432F45A001BC39C /* ListVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		31B81C442432F511001BC39C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				31B81C452432F531001BC39C /* CanadaModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		31B81C472432F562001BC39C /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				31B81C502432F5EA001BC39C /* Theme */,
+				31B81C4B2432F58C001BC39C /* Extensions */,
+				31B81C482432F569001BC39C /* Common */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		31B81C482432F569001BC39C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				31B81C492432F578001BC39C /* Constants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		31B81C4B2432F58C001BC39C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				31B81C4C2432F5AB001BC39C /* Uiview+constraints.swift */,
+				31B81C4E2432F5D7001BC39C /* UIimage+func.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		31B81C502432F5EA001BC39C /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				31B81C512432F5FE001BC39C /* Theme.swift */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 		9B1752EA5349CFAA4ED57F6C /* Frameworks */ = {
@@ -295,9 +361,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31B81C522432F5FE001BC39C /* Theme.swift in Sources */,
+				31B81C432432F45A001BC39C /* ListVC.swift in Sources */,
 				31B81C242432DF4E001BC39C /* ViewController.swift in Sources */,
 				31B81C202432DF4E001BC39C /* AppDelegate.swift in Sources */,
 				31B81C222432DF4E001BC39C /* SceneDelegate.swift in Sources */,
+				31B81C4D2432F5AB001BC39C /* Uiview+constraints.swift in Sources */,
+				31B81C4F2432F5D7001BC39C /* UIimage+func.swift in Sources */,
+				31B81C462432F531001BC39C /* CanadaModel.swift in Sources */,
+				31B81C4A2432F578001BC39C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
