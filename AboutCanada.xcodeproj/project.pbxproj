@@ -23,6 +23,8 @@
 		31B81C542432F6C6001BC39C /* ReadMe.md in Resources */ = {isa = PBXBuildFile; fileRef = 31B81C532432F6C6001BC39C /* ReadMe.md */; };
 		31B81C572432F7D4001BC39C /* CListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B81C562432F7D4001BC39C /* CListView.swift */; };
 		31B81C59243308A3001BC39C /* CanadaTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B81C58243308A3001BC39C /* CanadaTVC.swift */; };
+		31B81C5B243333D5001BC39C /* canady.json in Resources */ = {isa = PBXBuildFile; fileRef = 31B81C5A243333D5001BC39C /* canady.json */; };
+		31B81C5D24333435001BC39C /* CanadaModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B81C5C24333435001BC39C /* CanadaModelTest.swift */; };
 		B3E2EE4437B237DEDA4D3C90 /* Pods_AboutCanada.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23F680F2241F1497334AA2F6 /* Pods_AboutCanada.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		31B81C532432F6C6001BC39C /* ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
 		31B81C562432F7D4001BC39C /* CListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CListView.swift; sourceTree = "<group>"; };
 		31B81C58243308A3001BC39C /* CanadaTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanadaTVC.swift; sourceTree = "<group>"; };
+		31B81C5A243333D5001BC39C /* canady.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = canady.json; sourceTree = "<group>"; };
+		31B81C5C24333435001BC39C /* CanadaModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanadaModelTest.swift; sourceTree = "<group>"; };
 		45695D40E0A400B4E9CD1238 /* Pods-AboutCanada.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanada.debug.xcconfig"; path = "Target Support Files/Pods-AboutCanada/Pods-AboutCanada.debug.xcconfig"; sourceTree = "<group>"; };
 		6586996DFEFA1EE2D7A54B4A /* Pods-AboutCanadaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanadaTests.debug.xcconfig"; path = "Target Support Files/Pods-AboutCanadaTests/Pods-AboutCanadaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A8BFEBA790FD7AD4601637E2 /* Pods-AboutCanadaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AboutCanadaTests.release.xcconfig"; path = "Target Support Files/Pods-AboutCanadaTests/Pods-AboutCanadaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +142,8 @@
 			children = (
 				31B81C362432DF51001BC39C /* AboutCanadaTests.swift */,
 				31B81C382432DF51001BC39C /* Info.plist */,
+				31B81C5A243333D5001BC39C /* canady.json */,
+				31B81C5C24333435001BC39C /* CanadaModelTest.swift */,
 			);
 			path = AboutCanadaTests;
 			sourceTree = "<group>";
@@ -305,6 +311,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31B81C5B243333D5001BC39C /* canady.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +405,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31B81C372432DF51001BC39C /* AboutCanadaTests.swift in Sources */,
+				31B81C5D24333435001BC39C /* CanadaModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

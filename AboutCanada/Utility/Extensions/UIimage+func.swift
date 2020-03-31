@@ -12,7 +12,7 @@ let imageCache = NSCache<NSString, UIImage>()
 
 extension UIImageView {
     
-    //
+    //image is cached once downloaded and saved with url as the key. 
     func imageFromUrl(_ urlString: String) {
         image = nil
         if let cachedImage = imageCache.object(forKey: urlString as NSString) {
