@@ -28,8 +28,17 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.register(CanadaTVC.self, forCellReuseIdentifier: "cellId")
-         getApiData()
+        tableView.register(CanadaTVC.self, forCellReuseIdentifier: kCellId)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem:
+            UIBarButtonItem.SystemItem.refresh, target: self, action:
+        #selector(refreshData))
+        
+        getApiData()
+    }
+    
+    @objc func refreshData(){
+        getApiData()
     }
     
     func getApiData(){
@@ -80,7 +89,7 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
        }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-           let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! CanadaTVC
+           let cell = tableView.dequeueReusableCell(withIdentifier: kCellId, for: indexPath) as! CanadaTVC
                  cell.backgroundColor = UIColor.white
                  cell.tag = indexPath.section
                  let canadaRow = self.canadaList[indexPath.section]

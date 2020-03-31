@@ -9,3 +9,4 @@
 import Foundation
 
 let kBaseUrl : String = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
+let kCellId : String = "cellId"
