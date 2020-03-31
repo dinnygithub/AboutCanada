@@ -27,7 +27,7 @@ class CanadaModelTest: XCTestCase {
         canadaList = articlesData.rows!
         viewTitle = articlesData.title
     }
-    func testAddress() {
+    func testTitle() {
         let row = canadaList.first
         XCTAssertEqual(row?.title,"Beavers")
     }
