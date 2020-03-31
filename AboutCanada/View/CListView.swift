@@ -49,11 +49,6 @@ class CListView: UIView {
     private func setupViews() {
            self.addSubview(backgroundView)
            self.addSubview(tableview)
-           
-           tableview.snp.makeConstraints{make in
-               make.height.equalToSuperview()
-            make.width.equalToSuperview()
-           }
     }
 }
 
