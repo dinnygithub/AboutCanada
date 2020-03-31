@@ -28,7 +28,6 @@ class CanadaTVC: UITableViewCell {
     
     let cellView: UIView = {
         let view = UIView()
-    //    view.backgroundColor = Theme.colors.acGreen()
         view.layer.cornerRadius = 10
         view.layer.borderColor = UIColor.black.cgColor
         view.layer.borderWidth = 2.0
@@ -62,7 +61,6 @@ class CanadaTVC: UITableViewCell {
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.boldSystemFont(ofSize: 12)
-      //  label.backgroundColor = UIColor.yellow
         label.textAlignment = NSTextAlignment.left
         return label
     }()

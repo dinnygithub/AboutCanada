@@ -41,9 +41,12 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         getApiData()
     }
     
+    
     func getApiData(){
-        AF.request(kBaseUrl,method: .post).response { response in
+        AF.request(kBaseUrl,method: .get).response { response in
             guard let dataJson = response.data else { return }
+            
+            //Since the json response contains other characters, the response is  String.Encoding.isoLatin1 encoded
             let responseStrInISOLatin = String(data: dataJson, encoding: String.Encoding.isoLatin1)
             guard let modifiedDataInUTF8Format = responseStrInISOLatin?.data(using: String.Encoding.utf8) else {
                   print("could not convert data to UTF-8 format")
@@ -52,9 +55,12 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             do {
                 guard let _ = try JSONSerialization.jsonObject(with: modifiedDataInUTF8Format, options: .mutableContainers) as? [String: Any] else {return}
                 let decoder = JSONDecoder()
+                
+                // the data is mapped to our object Canada Model and property canadaList is populated
                 guard let canadaData = try? decoder.decode(CanadaModel.self, from: modifiedDataInUTF8Format) else { return }
                 self.canadaList = (canadaData.rows)!
                  DispatchQueue.main.async() {
+                        //the title of the view controller is also populated via the response from the web service
                         if canadaData.title.count>0 {
                             self.title = canadaData.title
                         }
@@ -70,24 +76,29 @@ class ListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
            return 10;
        }
 
+    //data is shown in sections to acheive space between each row item
     func numberOfSections(in tableView: UITableView) -> Int {
            return self.canadaList.count
         }
 
+    // header is created which is used as space between each row item.
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
            let header = UIView()
            header.backgroundColor = UIColor.clear
            return header
         }
 
+    //each section will have only 1 row. This is for  design prurpose only.
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
         }
     
+    //To get dynamic cell height, UITableViewAutomaticDimension is used and the constraints of the table view cell is set up accordingly.
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
            return UITableView.automaticDimension
        }
     
+    //data from canadaList is accessed and the table view is populated
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
            let cell = tableView.dequeueReusableCell(withIdentifier: kCellId, for: indexPath) as! CanadaTVC
                  cell.backgroundColor = UIColor.white
